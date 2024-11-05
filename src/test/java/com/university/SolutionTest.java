@@ -1,5 +1,6 @@
 package com.university;
 
+import com.university.app.App;
 import org.junit.jupiter.api.Test;
 
 import java.io.BufferedReader;
@@ -18,7 +19,7 @@ public class SolutionTest {
             e.printStackTrace();
             throw new RuntimeException("Failed to execute App.main()");
         }
-        
+
         String solutionFilePath = "src/main/resources/solution.csv";
         String expectedFilePath = "src/main/resources/expected.csv";
 
@@ -28,11 +29,11 @@ public class SolutionTest {
             String solutionLine;
             String expectedLine;
 
-            while ((solutionLine = solutionReader.readLine()) != null && 
+            while ((solutionLine = solutionReader.readLine()) != null &&
                    (expectedLine = expectedReader.readLine()) != null) {
                 assertEquals(expectedLine, solutionLine, "Mismatch found in the CSV file content.");
             }
-            
+
             // Ensure both files have the same number of lines
             assertEquals(solutionReader.readLine(), expectedReader.readLine(), "Files have different number of lines.");
 
