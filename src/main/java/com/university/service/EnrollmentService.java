@@ -2,9 +2,8 @@ package com.university.service;
 
 import com.university.model.CourseEnrollment;
 import com.university.model.Student;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
+import java.util.*;
 
 public class EnrollmentService {
     public Map<String, Integer> calculateEnrollmentCount(List<CourseEnrollment> enrollments) {

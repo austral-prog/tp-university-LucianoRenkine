@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.List;
 
-public class CSVWriter {
+public class CSVWriter1 {
     public static void writeSolution(String filePath, List<String> names, List<Integer> courseCount) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             writer.write("Student_Name,Course_Count\n");

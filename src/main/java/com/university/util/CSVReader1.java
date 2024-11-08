@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CSVReader {
+public class CSVReader1 {
     public List<CourseEnrollment> readEnrollments(String filePath) throws IOException {
         List<CourseEnrollment> enrollments = new ArrayList<>();
 
