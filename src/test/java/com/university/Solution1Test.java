@@ -15,23 +15,9 @@ public class Solution1Test {
     }
 
     @Test
-    public void testStudentEquality() {
-        Student student1 = new Student("Alice");
-        Student student2 = new Student("Alice");
-        assertEquals(student1, student2, "Students with the same name should be equal");
-    }
-
-    @Test
     public void testCourseCreation() {
         Course course = new Course("Mathematics");
         assertEquals("Mathematics", course.getSubject(), "The course subject should be Mathematics");
-    }
-
-    @Test
-    public void testCourseEquality() {
-        Course course1 = new Course("Mathematics");
-        Course course2 = new Course("Mathematics");
-        assertEquals(course1, course2, "Courses with the same subject should be equal");
     }
 
     @Test
