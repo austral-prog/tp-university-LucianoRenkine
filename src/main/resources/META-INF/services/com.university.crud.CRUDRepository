@@ -1,0 +1,3 @@
+com.university.crud.StudentRepository
+com.university.crud.CourseRepository
+com.university.crud.EvaluationRepository
