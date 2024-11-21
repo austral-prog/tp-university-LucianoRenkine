@@ -22,7 +22,7 @@ public class Course implements Entity {
         this.subject = subject;
     }
 
-    public Course(){
+    public Course() {
         this.id = idCounter++;
         this.classroom = 0;
         this.students = new ArrayList<>();

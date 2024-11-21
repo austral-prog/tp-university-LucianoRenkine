@@ -1,11 +1,13 @@
 package com.university.crudTest;
 
+import com.university.crud.CRUDRepository;
 import com.university.entity.Entity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import com.university.crud.CRUDRepository;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Modifier;
+import java.sql.SQLOutput;
 import java.util.ServiceLoader;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -64,6 +66,11 @@ class CRUDRepositoryTest {
     void testCRUDOperationsOnAllRepositories() {
         for (CRUDRepository crudRepository : serviceLoader) {
             assertNotNull(crudRepository, "CRUDRepository should not be null");
+            Class<? extends Entity> entityClass = crudRepository.getEntityClass();
+            if (Modifier.isAbstract(entityClass.getModifiers())) {
+                System.out.println("Skipping abstract class: " + crudRepository.getIdentifier());
+                continue;
+            }
 
             // Print the entity type being tested
             System.out.println("Testing CRUDRepository for entity type: " + crudRepository.getIdentifier());

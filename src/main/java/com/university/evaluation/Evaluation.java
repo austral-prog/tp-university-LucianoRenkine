@@ -23,7 +23,7 @@ public abstract class Evaluation implements Entity {
         this.grades = new ArrayList<>();
     }
 
-    public Evaluation(){
+    public Evaluation() {
         this.id = ++idCounter;
         this.name = "";
         this.studentName = "";
